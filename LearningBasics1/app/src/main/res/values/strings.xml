@@ -4,4 +4,12 @@
 
     <!-- Buttons -->
     <string name="btn_notes">Go to notes!</string>
+
+    <!-- Items -->
+    <string name="item_note_name">ItemName</string>
+    <string name="item_note_price">ItemPrice</string>
+    <string name="item_note_count">ItemCount</string>
+
+    <!-- Headers -->
+    <string name="header_notes">Notes</string>
 </resources>

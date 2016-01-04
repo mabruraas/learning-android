@@ -2,21 +2,55 @@ package no.bacheloroppgaven.android.learningbasics1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class NotesActivity extends AppCompatActivity {
+import java.util.Arrays;
+import java.util.List;
+
+import no.bacheloroppgaven.android.learningbasics1.model.Note;
+import no.bacheloroppgaven.android.learningbasics1.model.adapter.NoteAdapter;
+
+public class NotesActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+
+    TextView heading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
 
-        initTextFields();
+        initHeader();
+        initNoteList();
     }
 
-    private void initTextFields() {
-        TextView heading = (TextView) findViewById(R.id.txt_notes_heading);
+    private void initHeader() {
+        heading = (TextView) findViewById(R.id.header_notes);
+        heading.setText(R.string.header_notes);
+    }
 
-        heading.setText("Notes");
+    private void initNoteList() {
+        final ListView noteList = (ListView) findViewById(R.id.list_notes);
+
+        Note[] notes = {
+                new Note("Finca Tamana", 74.9, 2),
+                new Note("Burger", 186.0, 1),
+                new Note("Chips", 25.0, 1)
+        };
+
+        final List<Note> list = Arrays.asList(notes);
+        final NoteAdapter adapter = new NoteAdapter(this, android.R.layout.simple_list_item_1, list);
+        noteList.setAdapter(adapter);
+        noteList.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Note selectedNote = (Note) parent.getItemAtPosition(position);
+
+        Toast.makeText(NotesActivity.this, selectedNote.getName(), Toast.LENGTH_SHORT).show();
     }
 }
