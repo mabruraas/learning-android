@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/item_note_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/item_note_name"
+        android:textSize="@dimen/list_title_size" />
+
+    <TextView
+        android:id="@+id/item_note_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/item_note_count"
+        android:layout_alignParentEnd="true"
+        android:text="@string/item_note_price"
+        android:textSize="@dimen/list_title_size" />
+
+    <TextView
+        android:id="@+id/item_note_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/item_note_name"
+        android:layout_marginTop="25dp"
+        android:text="@string/item_note_count"
+        android:textSize="@dimen/list_element_size" />
+
+</RelativeLayout>
