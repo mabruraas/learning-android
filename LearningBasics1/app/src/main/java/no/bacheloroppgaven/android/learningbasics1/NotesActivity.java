@@ -38,7 +38,12 @@ public class NotesActivity extends AppCompatActivity implements AdapterView.OnIt
         Note[] notes = {
                 new Note("Finca Tamana", 74.9, 2),
                 new Note("Burger", 186.0, 1),
-                new Note("Chips", 25.0, 1)
+                new Note("Hipster Øl", 25.0, 1),
+                new Note("Kruttønne", 1500.0, 1),
+                new Note("Luft", 250.0, 1),
+                new Note("Kjærlighet", 332.0, 1),
+                new Note("Bestemors favoritter", 55.0, 163),
+                new Note("Sølvgutt", 77325.0, 1)
         };
 
         final List<Note> list = Arrays.asList(notes);
