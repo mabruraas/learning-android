@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LearningBasics1</string>
+    <string name="txt_hello_world">Hello World!</string>
+
+    <!-- Buttons -->
+    <string name="btn_notes">Go to notes!</string>
 </resources>
