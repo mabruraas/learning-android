@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LearningBasics2</string>
+    <string name="header_login">Please log in</string>
+
+    <!-- Hints -->
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="lbl_login">Log in!</string>
+    <string name="error_general">Something went wrong</string>
+    <string name="error_login">Incorrect credentials</string>
+    <string name="header_welcome">Welcome!</string>
+
+</resources>
