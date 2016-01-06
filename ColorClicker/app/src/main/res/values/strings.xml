@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ColorClicker</string>
+    <string name="startup_create">Create new game</string>
+    <string name="startup_join">Join existing game</string>
 </resources>
