@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 import com.parse.Parse;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import no.bacheloroppgaven.android.learningbasics4.services.ActionExecutorService;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -66,14 +69,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.d("ActionBroadcaster", "BroadcastReceiver triggered");
 
             Log.d("ActionBroadcaster", "Getting active actions from parameter intent sent from service");
-            String[] activeActions = (String[]) intent.getExtras().get("activeActions");
-
-            Log.d("ActionBroadcaster", "ActiveActions.length: " + activeActions.length);
+            List<String> activeActions = intent.getExtras().getStringArrayList("activeActions");
+            if(activeActions == null || activeActions.isEmpty()){
+                activeActions = new ArrayList<>();
+                activeActions.add("No actions found");
+            }
             Log.d("ActionBroadcaster", "View component text: " + vActiveActions.getText());
+            Log.d("ActionBroadcaster", "ActiveActions.size: " + activeActions.size());
             if (vActiveActions != null) {
+                vActiveActions.setText("");
                 for (String activeAction : activeActions) {
                     Log.d("ActionBroadcaster", "Adding "+ activeAction + " as action to view component");
-                    vActiveActions.setText(vActiveActions.getText() + "\n" + activeAction);
+                    vActiveActions.setText(vActiveActions.getText() + activeAction + "\n");
                 }
             }
         }

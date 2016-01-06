@@ -29,14 +29,16 @@ public class ActionExecutorService extends IntentService {
         List<String> actions = getActiveActions();
         Intent broadcastIntent = new Intent();
 
+
         broadcastIntent.setAction(MainActivity.ActionBroadcaster.ACTION_RESP);
         broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
 
         Log.d("ActionExecutorService", "Putting active actions on broadcaster intent");
-        broadcastIntent.putExtra("activeActions", actions.toArray());
+       // broadcastIntent.putExtra("activeActions", actions.toArray());
+        broadcastIntent.putStringArrayListExtra("activeActions", (ArrayList<String>) actions);
 
         Log.d("ActionExecutorService", "Sending broadcast");
-        sendBroadcast(intent);
+        sendBroadcast(broadcastIntent);
     }
 
     private List<String> getActiveActions() {
@@ -61,3 +63,4 @@ public class ActionExecutorService extends IntentService {
         return activeActions;
     }
 }
+

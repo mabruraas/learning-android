@@ -19,6 +19,8 @@
         android:id="@+id/btn_trigger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trigger background service!"/>
+        android:text="Trigger background service!"
+        android:layout_below="@+id/txt_action_list"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
