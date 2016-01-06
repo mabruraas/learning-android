@@ -11,6 +11,8 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
+import no.bacheloroppgaven.android.learningbasics4.MainActivity;
+
 public class ActionExecutorService extends IntentService {
 
     /**
@@ -25,10 +27,13 @@ public class ActionExecutorService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         // Bundle extras = intent.getExtras(); // For sending service parameters
         List<String> actions = getActiveActions();
-        Intent broadcasterIntent = new Intent();
+        Intent broadcastIntent = new Intent();
+
+        broadcastIntent.setAction(MainActivity.ActionBroadcaster.ACTION_RESP);
+        broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
 
         Log.d("ActionExecutorService", "Putting active actions on broadcaster intent");
-        broadcasterIntent.putExtra("activeActions", actions.toArray());
+        broadcastIntent.putExtra("activeActions", actions.toArray());
 
         Log.d("ActionExecutorService", "Sending broadcast");
         sendBroadcast(intent);
