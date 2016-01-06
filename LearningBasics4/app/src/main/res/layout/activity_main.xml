@@ -10,7 +10,8 @@
     tools:context="no.bacheloroppgaven.android.learningbasics4.MainActivity">
 
     <TextView
+        android:id="@+id/txt_action_list"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
