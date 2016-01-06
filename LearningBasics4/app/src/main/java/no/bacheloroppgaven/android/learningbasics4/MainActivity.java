@@ -3,6 +3,7 @@ package no.bacheloroppgaven.android.learningbasics4;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         initButtons();
         initTextFields();
+
+        initBroadcasters();
     }
 
     private void initButtons() {
@@ -35,6 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initTextFields() {
         vActiveActions = (TextView) findViewById(R.id.txt_action_list);
+    }
+
+    private void initBroadcasters() {
+        IntentFilter filter = new IntentFilter(ActionBroadcaster.ACTION_RESP);
+        filter.addCategory(Intent.CATEGORY_DEFAULT);
+        registerReceiver(new ActionBroadcaster(), filter);
     }
 
     @Override
@@ -50,7 +59,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public class ActionBroadcaster extends BroadcastReceiver {
-
+        public static final String ACTION_RESP =
+                "no.bacheloroppgaven.android.learningbasics4.broadcaster.activeactions";
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.d("ActionBroadcaster", "BroadcastReceiver triggered");
