@@ -27,10 +27,10 @@ public class ActionExecutorService extends IntentService {
         List<String> actions = getActiveActions();
         Intent broadcasterIntent = new Intent();
 
-        Log.d("ActionExecutorIntentService", "Putting active actions on broadcaster intent");
+        Log.d("ActionExecutorService", "Putting active actions on broadcaster intent");
         broadcasterIntent.putExtra("activeActions", actions.toArray());
 
-        Log.d("ActionExecutorIntentService", "Sending broadcast");
+        Log.d("ActionExecutorService", "Sending broadcast");
         sendBroadcast(intent);
     }
 
