@@ -5,7 +5,23 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Select mode view -->
     <string name="mode_join">Join game</string>
     <string name="mode_create">Create game</string>
     <string name="mode_practice">Practice offline</string>
+
+    <!-- Join game view -->
+    <string name="join_user">Username</string>
+    <string name="join_game_key">Game key</string>
+    <string name="join_find_game">Find game</string>
+    <string name="join_random">Find random</string>
+
+    <!-- Lobby view -->
+    <string name="lobby_host">Host</string>
+    <string name="lobby_participants">Participants</string>
+
+    <!-- x view -->
+    <!--<string name=""></string>-->
+
 </resources>
