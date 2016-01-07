@@ -17,7 +17,7 @@ public class LobbyActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
-//        ft.add(R.id.activity_lobby_fragment_container, SelectModeFragment.newInstance("", ""));
+        ft.add(R.id.activity_lobby_fragment_container, new SelectModeFragment());
         ft.commit();
     }
 }
