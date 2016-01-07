@@ -9,4 +9,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="no.bacheloroppgaven.android.colorclicker.lobby.LobbyActivity">
 
+    <fragment
+        android:id="@+id/activity_lobby_fragment_container"
+        android:name="no.bacheloroppgaven.android.colorclicker.lobby.SelectModeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </RelativeLayout>
