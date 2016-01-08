@@ -37,47 +37,31 @@ public class JoinGameFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        Intent i = null;
+        Intent lobbyIntent = new Intent(getContext(), LobbyActivity.class);
+
         switch (v.getId()) {
             case R.id.btn_join_find_game:
-                i = getGame();
+                configGameByKey(lobbyIntent);
                 break;
             case R.id.btn_join_random:
-                i = getOldestAvailableGame();
+                getOldestAvailableGame(lobbyIntent);
                 break;
             default:
                 Log.e(LOG_TAG, "View not recognized");
         }
-        openLobby(i);
+        openLobby(lobbyIntent);
     }
 
-    private void openLobby(Intent i) {
-        if (i != null) {
-            Log.d(LOG_TAG, "Opening game lobby");
-            startActivity(i);
-        } else {
-            Log.d(LOG_TAG, "Intent was null");
-        }
-    }
-
-    private Intent getGame() {
+    private void configGameByKey(Intent lobbyIntent) {
         String enteredKey = ((EditText)
                 getActivity().findViewById(R.id.etxt_game_key)).getText().toString();
 
-        findGameByGameKey(enteredKey);
-        Intent lobbyIntent = new Intent(getContext(), LobbyActivity.class);
-        lobbyIntent.putExtra("host", false);
-        return lobbyIntent;
+        getGameInfoByKey(enteredKey);
+
+        // TODO: Put game info on lobbyIntent
     }
 
-    private Intent getOldestAvailableGame() {
-        // TODO: Get oldest available game in db
-        Log.d(LOG_TAG, "Finding oldest available game");
-
-        return new Intent(getContext(), LobbyActivity.class);
-    }
-
-    private void findGameByGameKey(String key) {
+    private void getGameInfoByKey(String key) {
         if (key != null && !key.isEmpty()) {
             Log.d(LOG_TAG, "Finding game by key: " + key);
             // TODO: get game by key
@@ -85,5 +69,18 @@ public class JoinGameFragment extends Fragment implements View.OnClickListener {
             Log.i(LOG_TAG, "Entered key was empty");
             // TODO: Handle invalid key
         }
+    }
+
+    private void getOldestAvailableGame(Intent lobbyIntent) {
+        Log.d(LOG_TAG, "Finding oldest available game");
+        // TODO: Get game info for oldest available game
+        // TODO: Put game info on lobbyIntent
+    }
+
+    private void openLobby(Intent i) {
+        i.putExtra("host", false);
+
+        Log.d(LOG_TAG, "Opening game lobby");
+        startActivity(i);
     }
 }
