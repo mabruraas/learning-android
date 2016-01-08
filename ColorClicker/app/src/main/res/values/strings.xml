@@ -3,9 +3,6 @@
     <string name="startup_create">Create new game</string>
     <string name="startup_join">Join existing game</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <!-- Select mode view -->
     <string name="mode_join">Join game</string>
     <string name="mode_create">Create game</string>
@@ -19,7 +16,10 @@
 
     <!-- Lobby view -->
     <string name="lobby_host">Host</string>
+    <string name="lobby_start_game">Start game</string>
     <string name="lobby_participants">Participants</string>
+    <string name="lobby_default_host_name">Unknown host</string>
+    <string name="lobby_waiting_for_game">Waiting for host</string>
 
     <!-- x view -->
     <!--<string name=""></string>-->

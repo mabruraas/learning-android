@@ -8,13 +8,13 @@ import android.view.ViewGroup;
 
 import no.bacheloroppgaven.android.colorclicker.R;
 
-public class LobbyFragment extends Fragment {
-    public LobbyFragment() {
+public class LobbyWaitFragment extends Fragment {
+    public LobbyWaitFragment() {
         // Required empty public constructor
     }
 
-    public static LobbyFragment newInstance(String param1, String param2) {
-        LobbyFragment fragment = new LobbyFragment();
+    public static LobbyWaitFragment newInstance(String param1, String param2) {
+        LobbyWaitFragment fragment = new LobbyWaitFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -24,7 +24,7 @@ public class LobbyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_lobby, container, false);
+        View view = inflater.inflate(R.layout.fragment_lobby_wait, container, false);
 
 
 

@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import no.bacheloroppgaven.android.colorclicker.R;
-import no.bacheloroppgaven.android.colorclicker.setup.CreateGameFragment;
 
 public class LobbyActivity extends AppCompatActivity {
 
@@ -18,7 +17,12 @@ public class LobbyActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
-        ft.add(R.id.container_lobby, new LobbyFragment());
+        if (false) { // TODO: Check if user is host or participant
+            ft.add(R.id.container_lobby, new LobbyWaitFragment());
+        } else {
+            ft.add(R.id.container_lobby, new StartGameFragment());
+        }
+
         ft.commit();
     }
 }
