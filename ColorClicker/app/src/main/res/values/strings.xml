@@ -20,6 +20,8 @@
     <string name="lobby_participants">Participants</string>
     <string name="lobby_default_host_name">Unknown host</string>
     <string name="lobby_waiting_for_game">Waiting for host</string>
+    <string name="txt_username_hint">Username</string>
+    <string name="txt_gamekey_hint">Game key</string>
 
     <!-- x view -->
     <!--<string name=""></string>-->
