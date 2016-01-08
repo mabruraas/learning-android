@@ -13,7 +13,7 @@ import no.bacheloroppgaven.android.colorclicker.R;
 import no.bacheloroppgaven.android.colorclicker.lobby.LobbyActivity;
 
 public class JoinGameFragment extends Fragment implements View.OnClickListener {
-    private static final String LOG_TAG = "SelectModeFragment";
+    private static final String LOG_TAG = "JoinGameFragment";
     private static final int[] BUTTONS = {
             R.id.btn_join_find_game,
             R.id.btn_join_random
@@ -65,8 +65,9 @@ public class JoinGameFragment extends Fragment implements View.OnClickListener {
                 getActivity().findViewById(R.id.etxt_game_key)).getText().toString();
 
         findGameByGameKey(enteredKey);
-
-        return new Intent(getContext(), LobbyActivity.class);
+        Intent lobbyIntent = new Intent(getContext(), LobbyActivity.class);
+        lobbyIntent.putExtra("host", false);
+        return lobbyIntent;
     }
 
     private Intent getOldestAvailableGame() {

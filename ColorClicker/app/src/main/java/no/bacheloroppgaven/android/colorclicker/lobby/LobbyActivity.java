@@ -14,13 +14,15 @@ public class LobbyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lobby);
 
+        Bundle extras = getIntent().getExtras();
+
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
 
-        if (false) { // TODO: Check if user is host or participant
-            ft.add(R.id.container_lobby, new LobbyWaitFragment());
-        } else {
+        if (extras.getBoolean("host")) {
             ft.add(R.id.container_lobby, new StartGameFragment());
+        } else {
+            ft.add(R.id.container_lobby, new LobbyWaitFragment());
         }
 
         ft.commit();

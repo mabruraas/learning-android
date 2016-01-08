@@ -1,12 +1,70 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="no.bacheloroppgaven.android.colorclicker.setup.CreateGameFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/txt_create_private_public"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/switch_create_private_public"
+        android:layout_toStartOf="@+id/switch_create_private_public"
         android:text="@string/mode_create" />
 
-</FrameLayout>
+    <Switch
+        android:id="@+id/switch_create_private_public"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etxt_create_max_players"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/etxt_create_max_players"
+        android:text="New Switch" />
+
+    <TextView
+        android:id="@+id/txt_create_max_players"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/etxt_create_max_players"
+        android:layout_toLeftOf="@+id/etxt_create_max_players"
+        android:layout_toStartOf="@+id/etxt_create_max_players"
+        android:text="@string/mode_create" />
+
+    <EditText
+        android:id="@+id/etxt_create_max_players"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/switch_create_private_public"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/txt_create_rounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/etxt_create_rounds"
+        android:layout_toLeftOf="@+id/etxt_create_rounds"
+        android:layout_toStartOf="@+id/etxt_create_rounds"
+        android:text="@string/mode_create" />
+
+    <EditText
+        android:id="@+id/etxt_create_rounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etxt_create_max_players"
+        android:layout_alignStart="@+id/etxt_create_max_players"
+        android:layout_below="@+id/etxt_create_max_players"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/btn_create_create_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal" />
+
+</RelativeLayout>
