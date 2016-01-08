@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ColorClicker</string>
-    <string name="startup_create">Create new game</string>
-    <string name="startup_join">Join existing game</string>
+    <!--<string name="startup_create">Create new game</string>-->
+    <!--<string name="startup_join">Join existing game</string>-->
 
     <!-- Select mode view -->
     <string name="mode_join">Join game</string>
@@ -14,14 +14,19 @@
     <string name="join_find_game">Find game</string>
     <string name="join_random">Find random</string>
 
+    <!-- Crate game view -->
+    <string name="create_max_players">Max players in party</string>
+    <string name="create_game_rounds">Number of turns each</string>
+    <string name="create_new_game_txt">Create game</string>
+
     <!-- Lobby view -->
     <string name="lobby_host">Host</string>
     <string name="lobby_start_game">Start game</string>
     <string name="lobby_participants">Participants</string>
     <string name="lobby_default_host_name">Unknown host</string>
     <string name="lobby_waiting_for_game">Waiting for host</string>
-    <string name="txt_username_hint">Username</string>
-    <string name="txt_gamekey_hint">Game key</string>
+    <string name="create_switch_private">Private</string>
+
 
     <!-- x view -->
     <!--<string name=""></string>-->

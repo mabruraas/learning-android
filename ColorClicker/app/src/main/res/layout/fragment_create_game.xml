@@ -4,60 +4,44 @@
     android:layout_height="match_parent"
     tools:context="no.bacheloroppgaven.android.colorclicker.setup.CreateGameFragment">
 
-    <TextView
-        android:id="@+id/txt_create_private_public"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/switch_create_private_public"
-        android:layout_toStartOf="@+id/switch_create_private_public"
-        android:text="@string/mode_create" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:id="@+id/grid_layout_create"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_switch_create_private_public"
+            android:layout_column="0"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:text="@string/create_switch_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Switch
+            android:id="@+id/switch_create_private_public"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"/>
+    </GridLayout>
 
-    <Switch
-        android:id="@+id/switch_create_private_public"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/etxt_create_max_players"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/etxt_create_max_players"
-        android:text="New Switch" />
-
-    <TextView
-        android:id="@+id/txt_create_max_players"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/etxt_create_max_players"
-        android:layout_toLeftOf="@+id/etxt_create_max_players"
-        android:layout_toStartOf="@+id/etxt_create_max_players"
-        android:text="@string/mode_create" />
 
     <EditText
         android:id="@+id/etxt_create_max_players"
         android:singleLine="true"
-        android:layout_width="wrap_content"
+        android:hint="@string/create_max_players"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/switch_create_private_public"
+        android:layout_below="@+id/grid_layout_create"
         android:ems="10"
         android:inputType="numberSigned" />
-
-    <TextView
-        android:id="@+id/txt_create_rounds"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/etxt_create_rounds"
-        android:layout_toLeftOf="@+id/etxt_create_rounds"
-        android:layout_toStartOf="@+id/etxt_create_rounds"
-        android:text="@string/mode_create" />
 
     <EditText
         android:id="@+id/etxt_create_rounds"
         android:singleLine="true"
-        android:layout_width="wrap_content"
+        android:hint="@string/create_game_rounds"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etxt_create_max_players"
-        android:layout_alignStart="@+id/etxt_create_max_players"
         android:layout_below="@+id/etxt_create_max_players"
         android:ems="10"
         android:inputType="numberSigned" />
@@ -67,6 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:text="@string/create_new_game_txt"
         android:gravity="center_horizontal" />
 
 </RelativeLayout>

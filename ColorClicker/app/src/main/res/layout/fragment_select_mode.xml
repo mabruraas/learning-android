@@ -10,10 +10,11 @@
         android:layout_above="@+id/btn_mode_create"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
+        android:focusableInTouchMode="true"
+        android:selectAllOnFocus="true"
         android:text="@string/mode_join" />
     <Button
         android:id="@+id/btn_mode_create"
-        style="?android:attr/buttonStyleSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
