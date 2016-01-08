@@ -11,6 +11,7 @@
 
     <fragment
         android:id="@+id/container_game_room"
+        android:name="no.bacheloroppgaven.android.colorclicker.game.GameFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

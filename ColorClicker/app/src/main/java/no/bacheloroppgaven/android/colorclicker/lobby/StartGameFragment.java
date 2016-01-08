@@ -30,7 +30,7 @@ public class StartGameFragment extends Fragment implements View.OnClickListener 
 
         for (int id : BUTTONS) {
             // TODO: Make button clickable
-           // view.findViewById(id).setOnClickListener(this);
+           view.findViewById(id).setOnClickListener(this);
         }
 
         return view;
