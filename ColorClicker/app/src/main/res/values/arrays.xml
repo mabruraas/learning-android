@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dummy data -->
+    <string-array name="dummy_participants_short">
+        <item>Carmel</item>
+        <item>Frederica</item>
+        <item>Holli</item>
+        <item>Delorse</item>
+        <item>Leonia</item>
+    </string-array>
+    <string-array name="dummy_participants_long">
+        <item>Carmel</item>
+        <item>Frederica</item>
+        <item>Holli</item>
+        <item>Delorse</item>
+        <item>Leonia</item>
+        <item>Mee</item>
+        <item>Candy</item>
+        <item>Tiara</item>
+        <item>Rona</item>
+        <item>Cherly</item>
+        <item>Hassie</item>
+        <item>Carmon</item>
+        <item>Madelaine</item>
+        <item>Sadie</item>
+        <item>Jamel</item>
+    </string-array>
+
+</resources>

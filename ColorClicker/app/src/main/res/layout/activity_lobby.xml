@@ -9,4 +9,49 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="no.bacheloroppgaven.android.colorclicker.lobby.LobbyActivity">
 
+    <TextView
+        android:id="@+id/txt_lobby_participants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lobby_participants" />
+    <!--
+        <fragment
+            android:id="@+id/container_lobby_list"
+            android:name="no.bacheloroppgaven.android.colorclicker.lobby.StartGameFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    -->
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txt_lobby_host"
+        android:layout_below="@+id/txt_lobby_participants"
+        android:entries="@array/dummy_participants_short" />
+
+    <TextView
+        android:id="@+id/txt_lobby_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_lobby_host_name"
+        android:text="@string/lobby_host" />
+
+    <TextView
+        android:id="@+id/txt_lobby_host_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/container_lobby"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/lobby_default_host_name" />
+
+    <FrameLayout
+        android:id="@+id/container_lobby"
+        android:name="no.bacheloroppgaven.android.colorclicker.lobby.LobbyWaitFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom" />
+
 </RelativeLayout>

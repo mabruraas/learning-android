@@ -7,11 +7,11 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="no.bacheloroppgaven.android.colorclicker.game.GameActivity">
+    tools:context=".setup.SelectModeActivity">
 
     <fragment
-        android:id="@+id/container_game_room"
-        android:name="no.bacheloroppgaven.android.colorclicker.game.GameFragment"
+        android:id="@+id/container_select_mode"
+        android:name="no.bacheloroppgaven.android.colorclicker.setup.SelectModeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
