@@ -1,4 +1,4 @@
-# Library Link: Google Map API
+# Google Map API
 
 https://github.com/googlemaps/google-maps-services-java
 
@@ -20,7 +20,7 @@ Note: The Java Client for Google Maps Services is for use in server applications
 The Java Client for Google Maps Services would make an excellent choice as the basis for such a proxy server.
 
 
-# Library Link: AirTube
+# AirTube
 
 https://github.com/thinktube-kobe/airtube
 https://github.com/thinktube-kobe/airtube/wiki/What-is-AirTube%3F
@@ -32,7 +32,7 @@ Allthough AirTube is a generic networking library for Java, it is optimized for 
 AirTube is an Open Souce project and licensed under the LGPL.
 
 
-# Library Link: Gson
+# Gson
 
 https://github.com/google/gson
 
@@ -41,7 +41,7 @@ https://github.com/google/gson
 Gson is a Java library that can be used to convert Java Objects into their JSON representation. It can also be used to convert a JSON string to an equivalent Java object. Gson can work with arbitrary Java objects including pre-existing objects that you do not have source-code of.
 
 
-# Library Link: ActionBar Sherlock
+# ActionBar Sherlock
 
 http://actionbarsherlock.com/download.html
 
