@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="no.bacheloroppgaven.android.colorclicker.lobby.StartGameFragment">
+    tools:context=".lobby.fragment.StartGameFragment">
 
     <Button
         android:id="@+id/btn_start_game"

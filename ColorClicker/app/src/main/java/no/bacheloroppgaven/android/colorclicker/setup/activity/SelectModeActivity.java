@@ -1,4 +1,4 @@
-package no.bacheloroppgaven.android.colorclicker.setup;
+package no.bacheloroppgaven.android.colorclicker.setup.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import no.bacheloroppgaven.android.colorclicker.R;
+import no.bacheloroppgaven.android.colorclicker.setup.fragment.SelectModeFragment;
 
 public class SelectModeActivity extends AppCompatActivity {
 

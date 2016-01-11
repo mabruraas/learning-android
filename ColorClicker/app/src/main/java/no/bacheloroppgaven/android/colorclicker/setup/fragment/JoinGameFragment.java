@@ -1,4 +1,4 @@
-package no.bacheloroppgaven.android.colorclicker.setup;
+package no.bacheloroppgaven.android.colorclicker.setup.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import no.bacheloroppgaven.android.colorclicker.R;
-import no.bacheloroppgaven.android.colorclicker.lobby.LobbyActivity;
+import no.bacheloroppgaven.android.colorclicker.lobby.activity.LobbyActivity;
 
 public class JoinGameFragment extends Fragment implements View.OnClickListener {
     private static final String LOG_TAG = "JoinGameFragment";
@@ -44,7 +44,7 @@ public class JoinGameFragment extends Fragment implements View.OnClickListener {
                 configGameByKey(lobbyIntent);
                 break;
             case R.id.btn_join_random:
-                getOldestAvailableGame(lobbyIntent);
+                configOldestAvailableGame(lobbyIntent);
                 break;
             default:
                 Log.e(LOG_TAG, "View not recognized");
@@ -71,7 +71,7 @@ public class JoinGameFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    private void getOldestAvailableGame(Intent lobbyIntent) {
+    private void configOldestAvailableGame(Intent lobbyIntent) {
         Log.d(LOG_TAG, "Finding oldest available game");
         // TODO: Get game info for oldest available game
         // TODO: Put game info on lobbyIntent

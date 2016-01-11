@@ -1,4 +1,4 @@
-package no.bacheloroppgaven.android.colorclicker.game;
+package no.bacheloroppgaven.android.colorclicker.game.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

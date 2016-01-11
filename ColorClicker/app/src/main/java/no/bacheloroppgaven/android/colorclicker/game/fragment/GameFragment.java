@@ -1,4 +1,4 @@
-package no.bacheloroppgaven.android.colorclicker.game;
+package no.bacheloroppgaven.android.colorclicker.game.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

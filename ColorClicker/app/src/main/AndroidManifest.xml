@@ -11,17 +11,21 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".setup.SelectModeActivity">
+        <activity android:name=".setup.activity.SelectModeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".game.GameActivity" />
-        <activity android:name=".setup.JoinGameActivity" />
-        <activity android:name=".setup.CreateGameActivity" />
-        <activity android:name=".lobby.LobbyActivity"></activity>
+        <activity android:name=".game.activity.GameActivity" />
+        <activity android:name=".setup.activity.JoinGameActivity" />
+        <activity android:name=".setup.activity.CreateGameActivity" />
+        <activity android:name=".lobby.activity.LobbyActivity" />
+
+        <service
+            android:name=".setup.service.GameFinderService"
+            android:exported="false"></service>
     </application>
 
 </manifest>

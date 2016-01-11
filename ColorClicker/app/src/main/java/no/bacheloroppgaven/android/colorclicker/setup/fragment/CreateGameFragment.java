@@ -1,4 +1,4 @@
-package no.bacheloroppgaven.android.colorclicker.setup;
+package no.bacheloroppgaven.android.colorclicker.setup.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import no.bacheloroppgaven.android.colorclicker.R;
-import no.bacheloroppgaven.android.colorclicker.lobby.LobbyActivity;
+import no.bacheloroppgaven.android.colorclicker.lobby.activity.LobbyActivity;
 
 public class CreateGameFragment extends Fragment implements View.OnClickListener {
 

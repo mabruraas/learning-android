@@ -1,4 +1,4 @@
-package no.bacheloroppgaven.android.colorclicker.lobby;
+package no.bacheloroppgaven.android.colorclicker.lobby.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import no.bacheloroppgaven.android.colorclicker.R;
+import no.bacheloroppgaven.android.colorclicker.lobby.fragment.LobbyWaitFragment;
+import no.bacheloroppgaven.android.colorclicker.lobby.fragment.StartGameFragment;
 
 public class LobbyActivity extends AppCompatActivity {
 
